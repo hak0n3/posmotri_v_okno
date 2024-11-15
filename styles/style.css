@@ -13,14 +13,13 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-family: Oswald;
+  font-family: 'Oswald', 'Arial', sans-serif;
 }
 
 h1,
@@ -87,7 +86,7 @@ fieldset {
   justify-content: space-between;
   align-items: end;
   
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -108,7 +107,6 @@ fieldset {
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -120,7 +118,6 @@ fieldset {
   padding: 2.5px 14px 2.5px 0;
 
   width: 225px;
-  height: 27px;
 
   background-color: transparent;
 
@@ -128,7 +125,7 @@ fieldset {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -141,6 +138,11 @@ fieldset {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):hover .search-form__label-text {
+  text-decoration: underline;
 }
 
 .search-form__checkbox-list {
@@ -184,13 +186,15 @@ fieldset {
 }
 
 .button {
+  padding: 6px 0px;
+
   border: 1px solid white;
   
   background-color: transparent;
   
   cursor: pointer;
 
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", 'Arial', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
@@ -224,7 +228,6 @@ fieldset {
   margin-top: auto;
 
   width: 100%;
-  height: 34px;
 }
 
 .title {
@@ -261,16 +264,25 @@ fieldset {
 
 /* Templates */
 
-.cards-list-item-template:focus {
+.cards-list-item:focus {
   outline: none;
 }
 
-.cards-list-item-template:focus-visible {
+.cards-list-item:focus-visible {
   outline: 1px solid #fff;
+}
+
+.content__list-item:hover .content__video-card-title,
+.content__list-item:hover .content__video-card-description {
+  text-decoration: underline;
 }
 
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.content__list-item:active {
+  background-color: #545050;
 }
 
 .content__card-link {
@@ -298,6 +310,12 @@ fieldset {
 .content__video-card-title {
   margin-bottom: 6px;
 
+  max-width: 100%;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
@@ -305,7 +323,7 @@ fieldset {
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
